@@ -8,24 +8,20 @@ class Card:
         self._columns_count = 9
         self._numbers_count = (1, 91)
         self._numbers_in_line_count = 5
-        self._all_numbers : set = None
-        self._card_numbers: list = None
+        self._all_numbers = set()
+        self._card_numbers = list()
 
         self._create_card()
 
     def _create_card(self):
         
-        self._card_numbers = list()
-        self._all_numbers = set()
-
-
         # список всех возможных чисел
         all_numbers = list(range(*self._numbers_count))
 
         # идем по количеству строк
         for _ in range(self._rows_count):
             
-            # выбираем 5 случайных
+            # выбираем 5 случайных чисел
             selected_numbers = sorted(random.sample(all_numbers, k=self._numbers_in_line_count), reverse=True)
             # добавляем в множество всех чисел на карточке
             self._all_numbers.update(selected_numbers)

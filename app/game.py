@@ -56,7 +56,7 @@ class Game:
             burrel = self.bag.get_barrel()
 
             # проходим по всем игрокам и зачеркиваем числа
-            for index_gamer, gamer in enumerate(self.gamers_list[:]):
+            for gamer in self.gamers_list[:]:
                 if gamer != 'lost': 
                     cross_out_number_result = gamer.cross_out_number(burrel)
                 

@@ -10,7 +10,7 @@ class Bag:
     
     def _fill_bag(self):
 
-        self._barrels = [i for i in range(1,91)]
+        self._barrels = [i for i in range(1,self._barrels_count + 1)]
 
     def get_barrel(self):
 
