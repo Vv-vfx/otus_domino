@@ -1,5 +1,5 @@
 import unittest
-from service.card import Card
+from package.app.service.card import Card
 
 class TestCard(unittest.TestCase):
 
